@@ -39,3 +39,40 @@ html {
     margin: 15px auto;
     color: #979899;
 }
+
+.social-media-links {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fab {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: #C0C0C0;
+}
+
+.fab:hover {
+    color: #FFD700;
+}
+
+.social-media-links__link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background-color: #696969;
+    opacity: 0.9;
+    margin: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.social-media-links__link:hover {
+    border: 1px solid #C0C0C0;
+    background-color: #2d2e2e;
+    opacity: 0.8;
+}
