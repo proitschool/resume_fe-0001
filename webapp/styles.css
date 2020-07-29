@@ -47,15 +47,15 @@ html {
     cursor: pointer;
 }
 
-.fab {
+.social-media-links__icon {
     display: flex;
     font-size: 12px;
     align-items: center;
-    color: #C0C0C0;
+    color: #c0c0c0;
 }
 
-.fab:hover {
-    color: #FFD700;
+.social-media-links__link:hover .fab {
+    color: #ffd700;
 }
 
 .social-media-links__link {
@@ -69,10 +69,11 @@ html {
     margin: 3px;
     border: 1px solid transparent;
     border-radius: 2px;
+    text-decoration: none;
 }
 
 .social-media-links__link:hover {
-    border: 1px solid #C0C0C0;
+    border: 1px solid #c0c0c0;
     background-color: #2d2e2e;
     opacity: 0.8;
 }
