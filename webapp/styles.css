@@ -13,3 +13,29 @@ html {
     height: 100%;
     border-radius: 50%;
 }
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text__name {
+    font-weight: 300;
+    font-size: 25px;
+    color: #a4a5a6;
+    margin: 0 auto;
+}
+
+.profile-text__surname {
+    color: #e0a80d;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    margin: -2px auto;
+}
+
+.profile-text__profession {
+    font-weight: 300;
+    margin: 15px auto;
+    color: #979899;
+}
