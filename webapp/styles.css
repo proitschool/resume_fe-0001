@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.eot');
+    src: url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Lato-Regular.woff2') format('woff2'),
+        url('fonts/Lato-Regular.woff') format('woff'),
+        url('fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     background: #2d2e2e
 }
@@ -21,7 +32,7 @@ html {
 
 .profile-text__name {
     font-weight: 300;
-    font-size: 25px;
+    font-size: 40px;
     color: #a4a5a6;
     margin: 0 auto;
 }
@@ -32,10 +43,12 @@ html {
     font-weight: 700;
     font-size: 40px;
     margin: -2px auto;
+    font-family: 'Lato';
 }
 
 .profile-text__profession {
     font-weight: 300;
     margin: 15px auto;
     color: #979899;
+    font-family: 'Lato';    
 }
