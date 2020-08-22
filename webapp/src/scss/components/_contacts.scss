@@ -1,0 +1,29 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 15px;
+
+  &__contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    color: #a4a5a6;
+    margin: 15px;
+    font-weight: bold;
+
+    &-info {
+      margin: 15px;
+      font-weight: normal;
+
+      & a {
+        text-decoration: none;
+        color: #a4a5a6;
+      }
+
+      &:hover a {
+        color: #ffd700;
+      }
+    }
+  }
+}

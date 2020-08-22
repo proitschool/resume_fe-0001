@@ -1,0 +1,45 @@
+.profile {
+
+  &__avatar {
+    margin: 0 auto;
+    width: 174px;
+    height: 174px;
+
+    &__photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .profile__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 40px;
+    color: #a4a5a6;
+    margin: 0 auto;
+  }
+
+  &__surname {
+    color: #e0a80d;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    margin: -2px auto;
+    font-family: "Lato";
+  }
+
+  &__profession {
+    font-weight: 300;
+    margin: 15px auto;
+    color: #979899;
+    font-family: "Lato";
+  }
+}
+
+
+
