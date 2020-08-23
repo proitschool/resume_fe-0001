@@ -90,3 +90,40 @@ html {
     background-color: #2d2e2e;
     opacity: 0.8;
 }
+
+.line {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 90%;
+    border-bottom: 2px solid #696969;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 15px;
+}
+
+.contacts__contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    color: #a4a5a6;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.contacts__contact-info {
+    margin: 15px;
+    font-weight: normal;
+}
+
+.contacts__contact-info a {
+    text-decoration: none;
+    color: #a4a5a6;
+}
+
+.contacts__contact-info:hover a {
+    color: #ffd700;
+}
