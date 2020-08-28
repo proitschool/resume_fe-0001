@@ -32,7 +32,7 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[path][name].[ext]',
+                        name: './assets/fonts/[name].[ext]',
                     }
                 }]
             }
@@ -44,7 +44,7 @@ module.exports = {
             template: './src/index.html'
         }),
         new CopyPlugin({
-            patterns: [{from: './src/assets', to: './assets'}]
+            patterns: [{from: './src/assets/img', to: './assets/img'}]
         })
     ],
 };

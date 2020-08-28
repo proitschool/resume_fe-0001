@@ -1,3 +1,5 @@
+@import "../abstracts/colors";
+
 .social-media-links {
   display: flex;
   justify-content: center;
@@ -8,7 +10,7 @@
     display: flex;
     font-size: 12px;
     align-items: center;
-    color: #c0c0c0;
+    color: $color-light-accent;
   }
 
   &__link {
@@ -17,7 +19,7 @@
     justify-content: center;
     width: 22px;
     height: 22px;
-    background-color: #696969;
+    background-color: $color-dark-light;
     opacity: 0.9;
     margin: 3px;
     border: 1px solid transparent;
@@ -25,12 +27,12 @@
     text-decoration: none;
 
     &:hover {
-      border: 1px solid #c0c0c0;
-      background-color: #2d2e2e;
+      border: 1px solid $color-light-accent;
+      background-color: $color-primary;
       opacity: 0.8;
 
       & .fab {
-        color: #ffd700;
+        color: $color-secondary-accent;
       }
     }
   }

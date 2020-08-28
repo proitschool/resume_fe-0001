@@ -1,3 +1,5 @@
+@import "../abstracts/colors";
+
 .contacts {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    color: #a4a5a6;
+    color: $color-text-main;
     margin: 15px;
     font-weight: bold;
 
@@ -18,11 +20,11 @@
 
       & a {
         text-decoration: none;
-        color: #a4a5a6;
+        color: $color-text-main;
       }
 
       &:hover a {
-        color: #ffd700;
+        color: $color-secondary-accent;
       }
     }
   }
