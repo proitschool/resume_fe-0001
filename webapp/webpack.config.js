@@ -1,5 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -7,6 +9,13 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+    },
+    devServer: {
+        contentBase: './dist',
+        overlay: {
+            warnings: true,
+            errors: true
+        }
     },
     module: {
         rules: [
@@ -17,8 +26,25 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                    }
+                }]
             }
         ]
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin({filename: 'styles.css'}),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        }),
+        new CopyPlugin({
+            patterns: [{from: './src/assets', to: './assets'}]
+        })
+    ],
 };
