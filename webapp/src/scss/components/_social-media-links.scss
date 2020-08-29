@@ -1,0 +1,39 @@
+@import "../abstracts/colors";
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+
+  &__icon {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: $color-light-accent;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background-color: $color-dark-light;
+    opacity: 0.9;
+    margin: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid $color-light-accent;
+      background-color: $color-primary;
+      opacity: 0.8;
+
+      & .fab {
+        color: $color-secondary-accent;
+      }
+    }
+  }
+}
