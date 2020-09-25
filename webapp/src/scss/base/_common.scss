@@ -4,3 +4,19 @@ html {
   font-family: 'Lato', sans-serif;
   background: $color-primary;
 }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  &__header {
+
+  }
+
+  &__content {
+
+  }
+}
