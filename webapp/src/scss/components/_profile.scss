@@ -1,40 +1,87 @@
 @import "../abstracts/colors";
+@import "../abstracts/variables";
+
+// TODO refactor this file
+
+.section {
+  &__header {
+    padding-top: 100px;
+  }
+}
 
 .avatar {
-  margin: 0 auto;
-  width: 174px;
-  height: 174px;
+  text-align: center;
+
+  @media (min-width: $lg-screen-breakpoint) {
+    text-align: right;
+  }
 
   &__photo {
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
   }
 }
 
-.personal-data {
-  display: flex;
-  flex-direction: column;
+.profile {
+  display: grid;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  text-align: right;
 
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+}
+
+.personal-data {
   &__name {
-    font-weight: 300;
-    font-size: 40px;
     color: #a4a5a6;
-    margin: 0 auto;
+    font-size: 50px;
+    margin-bottom: 0;
+    line-height: 30px;
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 992px) {
+      margin: 0 auto;
+      width: 250px;
+    }
   }
 
   &__surname {
-    color: #e0a80d;
+    font-size: 60px;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 40px;
-    margin: -2px auto;
+    color: #e0a80d;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 
   &__profession {
-    font-weight: 300;
-    margin: 15px auto;
-    color: #979899;
+    font-size: 16px;
+    color: #a4a5a6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -85,5 +132,54 @@
   }
 }
 
+.social-links {
+  font-size: 25px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 33px 33px 33px;
 
+  @media screen and (min-width: 992px) {
+    margin: 20px auto;
+  }
 
+  @media screen and (min-width: 768px) {
+    margin: 20px auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+
+  &__icon {
+    font-size: 20px;
+    align-items: center;
+    color: $color-light-accent;
+    vertical-align:  middle;
+    position: absolute;
+    left: 6px;
+    top: 8px;
+  }
+
+  &__link {
+    margin-right: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: $color-dark-light;
+    opacity: 0.9;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      border: 1px solid $color-light-accent;
+      background-color: $color-primary;
+      opacity: 0.8;
+
+      & .fab {
+        color: $color-secondary-accent;
+      }
+    }
+  }
+}

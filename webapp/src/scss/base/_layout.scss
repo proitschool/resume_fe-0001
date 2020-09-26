@@ -1,0 +1,40 @@
+@import "../abstracts/variables";
+@import "../abstracts/colors";
+
+$default-padding: 70px;
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $lg-screen-breakpoint) {
+    width: $lg-screen-breakpoint;
+  }
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+
+  @media (max-width: $lg-screen-breakpoint) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__header {
+    background-color: $color-primary;
+    padding-right: $default-padding;
+
+    @media (max-width: $lg-screen-breakpoint) {
+      padding-right: 0;
+    }
+  }
+
+  &__content {
+    padding-left: $default-padding;
+
+    @media (max-width: $lg-screen-breakpoint) {
+      padding-left: 0;
+    }
+  }
+}
