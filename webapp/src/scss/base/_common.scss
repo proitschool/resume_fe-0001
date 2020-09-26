@@ -2,21 +2,9 @@
 
 html {
   font-family: 'Lato', sans-serif;
-  background: $color-primary;
+  background-color: $color-primary;
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.section {
-  &__header {
-
-  }
-
-  &__content {
-
-  }
+body {
+  margin: 0;
 }
