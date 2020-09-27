@@ -14,27 +14,26 @@ $default-padding: 70px;
 
 .section {
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 1fr;
 
-  @media (max-width: $lg-screen-breakpoint) {
-    display: grid;
-    grid-template-columns: 1fr;
+  @media (min-width: $lg-screen-breakpoint) {
+    grid-template-columns: 30% 1fr;
   }
 
   &__header {
     background-color: $color-primary;
-    padding-right: $default-padding;
+    padding-right: 0;
 
-    @media (max-width: $lg-screen-breakpoint) {
-      padding-right: 0;
+    @media (min-width: $lg-screen-breakpoint) {
+      padding-right: $default-padding;
     }
   }
 
   &__content {
-    padding-left: $default-padding;
+    padding-left: 0;
 
-    @media (max-width: $lg-screen-breakpoint) {
-      padding-left: 0;
+    @media (min-width: $lg-screen-breakpoint) {
+      padding-left: $default-padding;
     }
   }
 }
