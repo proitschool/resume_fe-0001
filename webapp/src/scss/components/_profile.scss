@@ -3,9 +3,11 @@
 
 // TODO refactor this file
 
-.section {
-  &__header {
-    padding-top: 100px;
+.profile-container {
+  .section {
+    &__header {
+      padding-top: 100px;
+    }
   }
 }
 
@@ -87,47 +89,33 @@
 
 .contacts {
   display: grid;
-  justify-items: center;
   margin-top: 15px;
   grid-template-columns: 1fr;
 
-  @media (min-width: 992px) {
+  @media (min-width: $md-screen-breakpoint) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $lg-screen-breakpoint) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   &__contact {
-    display: grid;
     color: $color-text-main;
-    margin: 15px;
     font-weight: bold;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    text-align: center;
+    padding-bottom: 30px;
 
-    @media (min-width: 1200px) {
-      justify-items: start;
+    @media (min-width: $lg-screen-breakpoint) {
+      text-align: left;
+    }
+
+    &-name {
+      margin-bottom: 12px;
     }
 
     &-info {
       font-weight: normal;
-      margin: 15px;
-
-      @media (min-width: 992px) {
-        margin: 0;
-        padding-top: 15px;
-      }
-
-      & a {
-        text-decoration: none;
-        color: $color-text-main;
-      }
-
-      &:hover a {
-        color: $color-secondary-accent;
-      }
     }
   }
 }
