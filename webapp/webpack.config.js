@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const HandlebarsPlugin = require('handlebars-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -11,6 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
+        index: 'en.html',
         contentBase: './dist',
         overlay: {
             warnings: true,
@@ -40,8 +42,23 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({filename: 'styles.css'}),
+        new HandlebarsPlugin({
+            entry: path.join(__dirname, "src", "views", "index.html"),
+            output: path.join(__dirname, "tmp", "ru.html"),
+            data: require("./src/i18n/ru")
+        }),
+        new HandlebarsPlugin({
+            entry: path.join(__dirname, "src", "views", "index.html"),
+            output: path.join(__dirname, "tmp", "en.html"),
+            data: require("./src/i18n/en")
+        }),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './tmp/ru.html',
+            filename: 'ru.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './tmp/en.html',
+            filename: 'en.html'
         }),
         new CopyPlugin({
             patterns: [{from: './src/assets/img', to: './assets/img'}]
