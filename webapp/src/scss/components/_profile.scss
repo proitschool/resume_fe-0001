@@ -111,12 +111,11 @@
 
   &__link-icon {
     font-size: 20px;
-    align-items: center;
     color: $color-light-accent;
-    vertical-align:  middle;
     position: absolute;
-    left: 6px;
-    top: 8px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
