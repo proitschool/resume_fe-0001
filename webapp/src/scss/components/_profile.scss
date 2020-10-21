@@ -54,26 +54,26 @@
   }
 
   &__name {
-    color: #a4a5a6;
-    font-size: 50px;
+    color: $color-text-main;
+    font-size: 67px;
   }
 
   &__surname {
-    font-size: 60px;
+    font-size: 67px;
     text-transform: uppercase;
-    color: #e0a80d;
+    color: $color-text-second;
   }
 
   &__profession {
-    font-size: 16px;
-    color: #a4a5a6;
+    font-size: 21px;
+    color: $color-text-main;
   }
 
   &__links {
     display: flex;
     justify-content: space-between;
     width: 130px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
     font-size: 25px;
     cursor: pointer;
 
@@ -115,20 +115,24 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%,-50%);
   }
 }
 
 .contacts {
+  width: 80%;
+  margin: 0 auto;
   display: grid;
-  margin-top: 15px;
   grid-template-columns: 1fr;
+  border-top: 2px solid $color-dark-accent;
 
   @media (min-width: $md-screen-breakpoint) {
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $lg-screen-breakpoint) {
+    width: 100%;
+    margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
@@ -137,6 +141,8 @@
     font-weight: bold;
     text-align: center;
     padding-bottom: 30px;
+    margin-top: 15px;
+    font-size: 14px;
 
     @media (min-width: $lg-screen-breakpoint) {
       text-align: left;
