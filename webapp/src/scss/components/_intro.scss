@@ -1,0 +1,30 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+
+.intro-container {
+  .section {
+    &__header {
+      border-top: 1px solid $color-dark-accent;
+      border-bottom: 1px solid $color-dark-accent;
+      text-align: left;
+      color: $color-text-main;
+      line-height: 1.75;
+
+      &-title {
+        font-weight: bold;
+      }
+
+      @media (min-width: $md-screen-breakpoint) {
+        border-top: 0;
+        border-bottom: 0;
+        text-align: right;
+      }
+    }
+
+    &__content {
+      color: $color-text-main;
+      line-height: 1.75;
+      text-align: justify;
+    }
+  }
+}

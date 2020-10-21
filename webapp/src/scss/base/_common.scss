@@ -1,14 +1,11 @@
 @import "../abstracts/colors";
 
 html {
+  display: flex;
   font-family: 'Lato', sans-serif;
   background-color: $color-primary;
 }
 
 body {
-  margin: 0;
-}
-
-h4 {
   margin: 0;
 }
