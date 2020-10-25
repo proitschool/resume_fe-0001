@@ -2,6 +2,8 @@
 @import "../abstracts/colors";
 
 $default-padding: 70px;
+$xs-section-padding: 25px;
+$sm-section-padding: 50px;
 
 .container {
   margin: 0 auto;
@@ -16,23 +18,31 @@ $default-padding: 70px;
   display: grid;
   grid-template-columns: 1fr;
 
-  @media (min-width: $lg-screen-breakpoint) {
+  @media (min-width: $md-screen-breakpoint) {
     grid-template-columns: 30% 1fr;
   }
 
   &__header {
     background-color: $color-primary;
-    padding-right: 0;
+    padding: $xs-section-padding;
 
-    @media (min-width: $lg-screen-breakpoint) {
+    @media (min-width: $sm-screen-breakpoint) {
+      padding: $sm-section-padding;
+    }
+
+    @media (min-width: $md-screen-breakpoint) {
       padding-right: $default-padding;
     }
   }
 
   &__content {
-    padding-left: 0;
+    padding: $xs-section-padding;
 
-    @media (min-width: $lg-screen-breakpoint) {
+    @media (min-width: $sm-screen-breakpoint) {
+      padding: $sm-section-padding;
+    }
+
+    @media (min-width: $md-screen-breakpoint) {
       padding-left: $default-padding;
     }
   }
