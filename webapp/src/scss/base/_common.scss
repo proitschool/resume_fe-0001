@@ -1,7 +1,7 @@
 @import "../abstracts/colors";
 
 html {
-  display: flex;
+  display: grid; // TODO fix layout for extra small screen
   font-family: 'Lato', sans-serif;
   background-color: $color-primary;
 }
