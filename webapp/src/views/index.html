@@ -9,9 +9,9 @@
 <body>
 <!-- LOCALS -->
 <div class="container">
-<div class="local-items">
+<div class="language-toggles">
     {{#each locals}}
-    <div class="local-items__item {{#if this.active}}active{{/if}}">{{this.name}}</div>
+    <div class="language-toggles__toggle {{#if this.active}}active{{/if}}">{{this.name}}</div>
     {{/each}}
 </div>
 </div>

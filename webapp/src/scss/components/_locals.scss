@@ -1,13 +1,13 @@
 @import "../abstracts/colors";
 @import "../abstracts/variables";
 
-.local-items {
+.language-toggles{
   display: grid;
-  grid-template-columns: 23px 23px;
+  grid-template-columns: $toggle-width, $toggle-width;
   float: right;
   gap: 10px;
 
-  &__item {
+  &__toggle {
     color: white;
     text-align: right;
     font-size: 20px;
