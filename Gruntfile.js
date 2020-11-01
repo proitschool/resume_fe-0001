@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		exec: {
 			build_frontend: {
 				cwd: './webapp',
-				cmd: 'npx webpack --config webpack.config.js'
+				cmd: 'npx webpack --config webpack.config.prod.js'
 			}
 		},
 		clean: {

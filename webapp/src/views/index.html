@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+
 <!-- LOCALS -->
 <div class="container">
-<div class="locals">
-    {{#each locals}}
-    <div class="locals-language-btn {{#if this.active}}active{{/if}}">{{this.name}}</div>
-    {{/each}}
-</div>
+    <div id="language-switcher" class="locals">
+        {{#each locals}}
+        <div class="locals__language-btn {{#if this.active}}locals__language-btn_active{{/if}}" data-local="{{this.local}}">{{this.name}}</div>
+        {{/each}}
+    </div>
 </div>
 
 <!-- PROFILE -->

@@ -1,16 +1,14 @@
+const {merge} = require('webpack-merge');
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const baseConfig = require('./webpack.config.base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HandlebarsPlugin = require('handlebars-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+const devWebpackConfig = merge(baseConfig, {
     mode: 'development',
-    entry: './src/index.js',
-    output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
+    devtool: "source-map",
     devServer: {
         index: 'en.html',
         contentBase: './dist',
@@ -19,38 +17,17 @@ module.exports = {
             errors: true
         }
     },
-    module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: './assets/fonts/[name].[ext]',
-                    }
-                }]
-            }
-        ]
-    },
     plugins: [
         new MiniCssExtractPlugin({filename: 'styles.css'}),
         new HandlebarsPlugin({
             entry: path.join(__dirname, "src", "views", "index.html"),
             output: path.join(__dirname, "tmp", "ru.html"),
-            data: require("./src/i18n/ru")
+            data: require("./src/store/ru")
         }),
         new HandlebarsPlugin({
             entry: path.join(__dirname, "src", "views", "index.html"),
             output: path.join(__dirname, "tmp", "en.html"),
-            data: require("./src/i18n/en")
+            data: require("./src/store/en")
         }),
         new HtmlWebpackPlugin({
             template: './tmp/ru.html',
@@ -63,5 +40,9 @@ module.exports = {
         new CopyPlugin({
             patterns: [{from: './src/assets/img', to: './assets/img'}]
         })
-    ],
-};
+    ]
+});
+
+module.exports = new Promise((resolve) => {
+    resolve(devWebpackConfig);
+});
