@@ -57,17 +57,20 @@
   &__name {
     color: $color-text-main;
     font-size: 67px;
+    font-weight: 300;
   }
 
   &__surname {
     font-size: 67px;
     text-transform: uppercase;
     color: $color-text-second;
+    font-weight: 700;
   }
 
   &__profession {
     font-size: 21px;
     color: $color-text-main;
+    font-weight: 300;
   }
 
   &__links {
