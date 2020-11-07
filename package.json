@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "start": "npm run build && node ./app/server.js"
   },
   "repository": {
     "type": "git",
