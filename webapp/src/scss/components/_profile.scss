@@ -89,12 +89,12 @@
   }
 
   &__link {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     background-color: $color-dark-light;
     opacity: 0.9;
-    border: 1px solid transparent;
-    border-radius: 2px;
+    border: 3px solid transparent;
+    border-radius: 3px;
     text-decoration: none;
     position: relative;
 
@@ -103,7 +103,7 @@
     }
 
     &:hover {
-      border: 1px solid $color-light-accent;
+      border: 3px solid $color-dark-light;
       background-color: $color-primary;
       opacity: 0.8;
 
@@ -194,7 +194,7 @@
     background-color: $color-dark-light;
     opacity: 0.9;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: 3px;
     text-decoration: none;
     position: relative;
 
