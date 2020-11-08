@@ -1,0 +1,36 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+
+.skills-container {
+  .section {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-row-gap: 15px;
+
+      .skill-section {
+        display: flex;
+        align-items: center;
+
+        &__title {
+          cursor: default;
+          transition: color 0.3s ease;
+          font-size: 16px;
+          color: $color-text-second;
+          margin-left: 10px;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $color-lightest;
+          }
+        }
+
+        &__img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

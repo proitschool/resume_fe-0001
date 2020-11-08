@@ -12,7 +12,9 @@
 <div class="container">
     <div id="language-switcher" class="locals">
         {{#each locals}}
-        <div class="locals__language-btn {{#if this.active}}locals__language-btn_active{{/if}}" data-local="{{this.local}}">{{this.name}}</div>
+        <div class="locals__language-btn {{#if this.active}}locals__language-btn_active{{/if}}"
+             data-local="{{this.local}}">{{this.name}}
+        </div>
         {{/each}}
     </div>
 </div>
@@ -32,7 +34,8 @@
                     <div class="personal-data__surname">rambowski</div>
                     <div class="personal-data__profession">Web Developer & Front-end Expert</div>
                     <div class="personal-data__links">
-                        <a class="personal-data__link" href="#"><i class="personal-data__link-icon fab fa-facebook-f"></i></a>
+                        <a class="personal-data__link" href="#"><i
+                                class="personal-data__link-icon fab fa-facebook-f"></i></a>
                         <a class="personal-data__link" href="#"><i class="personal-data__link-icon fab fa-dribbble"></i></a>
                         <a class="personal-data__link" href="#"><i class="personal-data__link-icon fab fa-twitter"></i></a>
                     </div>
@@ -68,6 +71,66 @@
             <div class="section__header-description">{{intro.description}}</div>
         </div>
         <div class="section__content">{{intro.content}}</div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<div class="skills-container container">
+    <div class="section">
+        <div class="section__header">
+            <div class="section__header-title">{{skills.title}}</div>
+        </div>
+        <div class="section__content">
+            <div class="skill-section">
+                <img src="assets/img/js.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">js5/js6</h3>
+            </div>
+            <div class="skill-section">
+                <img src="assets/img/git.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">git</h3>
+            </div>
+            <div class="skill-section">
+                <img src="assets/img/css.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">css</h3>
+            </div>
+            <div class="skill-section">
+                <img src="assets/img/ts.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">typescript</h3>
+
+            </div>
+            <div class="skill-section">
+                <img src="assets/img/node.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">node js</h3>
+            </div>
+            <div class="skill-section">
+                <img src="assets/img/sass.svg" alt="" class="skill-section__img">
+                <h3 class="skill-section__title">sass</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERIENCE  -->
+<div class="experience-container container">
+    <div class="section">
+        <div class="section__header">
+            <div class="section__header-title">EXPERIENCE</div>
+            <div class="section__header-description">Yes. I've been around</div>
+        </div>
+        <div class="section__content">
+            {{#each experiences}}
+            <div class="timeline-section clearfix">
+                <div class="timeline-section__point"></div>
+                <div class="timeline-section__header">
+                    <div class="timeline-section__period">{{this.period}}</div>
+                    <div class="timeline-section__organisation">{{this.organisation}}</div>
+                    <div class="timeline-section__position">{{this.organisation}}</div>
+                    <div class="timeline-section__city">{{this.city}}</div>
+                </div>
+                <div class="timeline-section__content">{{this.content}}</div>
+            </div>
+            {{/each}}
+        </div>
     </div>
 </div>
 </body>
