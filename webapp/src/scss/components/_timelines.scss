@@ -1,0 +1,57 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+
+.timeline-section {
+  position: relative;
+  border-left: 1px solid $color-dark-accent;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  color: $color-text-main;
+  line-height: 1.75;
+
+  &__point {
+    box-shadow: 0 0 0 10px $color-primary;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: $color-text-second;
+    border-radius: 50%;
+  }
+
+  &__header {
+    @media (min-width: $sm-screen-breakpoint) {
+      float: left;
+      width: 40%;
+    }
+  }
+
+  &__content {
+    text-align: justify;
+
+    @media (min-width: $sm-screen-breakpoint) {
+      float: left;
+      width: 60%;
+    }
+  }
+
+  &__period {
+    opacity: 0.6;
+    font-size: 0.7rem;
+  }
+
+  &__organisation {
+    font-weight: bold;
+  }
+
+  &__position {
+    font-size: 0.7rem;
+  }
+
+  &__city {
+    opacity: 0.6;
+    font-size: 0.7rem;
+  }
+}

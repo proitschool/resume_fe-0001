@@ -18,5 +18,28 @@ module.exports = {
     },
     skills: {
         title: 'SKILLS'
-    }
+    },
+    experiences: [
+        {
+            period: '2015 - Present',
+            organisation: 'UNICORN INCUBATOR INC.',
+            position: 'Senior Interface Designer',
+            city: 'Portland, OR',
+            content: `Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sedpretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eunibh. Nullam mollis. Ut justo. Suspendisse potenti.`
+        },
+        {
+            period: '2010 - 2013',
+            organisation: 'DREAMLAND CREATIVE',
+            position: 'Front-end Designer',
+            city: 'New York, NY',
+            content: `Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sedpretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eunibh. Nullam mollis. Ut justo. Suspendisse potenti.`
+        },
+        {
+            period: '2015 - Present',
+            organisation: 'UNICORN INCUBATOR INC.',
+            position: 'Senior Interface Designer',
+            city: 'Portland, OR',
+            content: `Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sedpretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eunibh. Nullam mollis. Ut justo. Suspendisse potenti.`
+        }
+    ]
 };
