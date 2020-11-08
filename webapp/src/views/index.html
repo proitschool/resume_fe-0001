@@ -118,48 +118,18 @@
             <div class="section__header-description">Yes. I've been around</div>
         </div>
         <div class="section__content">
-            <div class="section__content-block">
-                <div class="section__content-header">
-                    <div class="circle"></div>
-                    <div class="section__content-period">2015 - Present</div>
-                    <div class="section__content-organisation">UNICORN INCUBATOR INC.</div>
-                    <div class="section__content-position">Senior Interface Designer</div>
-                    <div class="section__content-city">Portland, OR</div>
+            {{#each experiences}}
+            <div class="timeline-section clearfix">
+                <div class="timeline-section__point"></div>
+                <div class="timeline-section__header">
+                    <div class="timeline-section__period">{{this.period}}</div>
+                    <div class="timeline-section__organisation">{{this.organisation}}</div>
+                    <div class="timeline-section__position">{{this.organisation}}</div>
+                    <div class="timeline-section__city">{{this.city}}</div>
                 </div>
-                <div class="section__content-description">Consectetuer adipiscing elit. Phasellus hendrerit.
-                    Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed
-                    pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu
-                    nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                </div>
+                <div class="timeline-section__content">{{this.content}}</div>
             </div>
-            <div class="section__content-block">
-                <div class="section__content-header">
-                    <div class="circle"></div>
-                    <div class="section__content-period">2013 - 2015</div>
-                    <div class="section__content-organisation">CALIFORNIA DESIGN BUREAU</div>
-                    <div class="section__content-position">Creative Director</div>
-                    <div class="section__content-city">Cupertino, CA</div>
-                </div>
-                <div class="section__content-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id,
-                    mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget
-                    blandit nunc tortor eu nibh. Nullam mollis.
-                </div>
-            </div>
-            <div class="section__content-block">
-                <div class="section__content-header">
-                    <div class="circle"></div>
-                    <div class="section__content-period">2010 - 2013</div>
-                    <div class="section__content-organisation">DREAMLAND CREATIVE</div>
-                    <div class="section__content-position">Front-end Designer</div>
-                    <div class="section__content-city">New York, NY</div>
-                </div>
-                <div class="section__content-description">Fusce lacinia arcu et nulla. Nulla vitae mauris non felis
-                    mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet
-                    vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero
-                    sodales leo, eget blandit nunc tortor eu nibh.
-                </div>
-            </div>
+            {{/each}}
         </div>
     </div>
 </div>

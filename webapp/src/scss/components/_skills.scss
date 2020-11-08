@@ -7,11 +7,11 @@
       display: grid;
       grid-template-columns: repeat(3, auto);
       grid-template-rows: repeat(2, auto);
+      grid-row-gap: 15px;
 
       .skill-section {
         display: flex;
         align-items: center;
-        padding-bottom: 35px;
 
         &__title {
           cursor: default;

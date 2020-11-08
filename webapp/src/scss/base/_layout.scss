@@ -50,12 +50,24 @@ $sm-section-padding: 50px;
 
   &__content {
     padding: $xs-section-padding;
+    border-top: 1px solid $color-dark-accent;
+    border-bottom: 1px solid $color-dark-accent;
+    text-align: left;
+    color: $color-text-main;
+
+    &-title {
+      font-weight: bold;
+    }
 
     @media (min-width: $sm-screen-breakpoint) {
+      border-top: 0;
+      border-bottom: 0;
       padding: $sm-section-padding;
     }
 
     @media (min-width: $md-screen-breakpoint) {
+      border-top: 0;
+      border-bottom: 0;
       padding-left: $default-padding;
     }
   }

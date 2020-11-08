@@ -6,9 +6,13 @@
 @import "base/common";
 @import "base/layout";
 
+/* UTILS */
+@import "utils/layout-utils";
+
 /* COMPONENTS */
 @import "src/scss/components/profile";
 @import "src/scss/components/intro";
 @import "src/scss/components/experience";
 @import "src/scss/components/locals";
+@import "src/scss/components/timelines";
 @import "src/scss/components/skills";
