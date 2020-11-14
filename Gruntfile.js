@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 
 	const path = {
 		webapp: './webapp',
-		app: './app'
-	}
+		app: '.'
+	};
 
 	// Project configuration.
 	grunt.initConfig({
