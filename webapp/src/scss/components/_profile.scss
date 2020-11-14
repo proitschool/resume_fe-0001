@@ -167,15 +167,15 @@
   display: grid;
   grid-template-columns: 33px 33px 33px;
 
-  @media screen and (min-width: 992px) {
+  @media (min-width: $md-screen-breakpoint) {
     margin: 20px auto;
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: $sm-screen-breakpoint) {
     margin: 20px auto;
   }
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: $sm-screen-breakpoint) {
     margin: 0 auto;
   }
 
