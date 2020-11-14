@@ -1,6 +1,15 @@
 @import "../abstracts/colors";
 @import "../abstracts/variables";
 
+.locals-container {
+  .section {
+    &__header,
+    &__content {
+      padding-top: 0;
+    }
+  }
+}
+
 .locals{
   display: flex;
   float: right;
