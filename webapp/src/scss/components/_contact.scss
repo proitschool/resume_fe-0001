@@ -1,0 +1,17 @@
+@import "../abstracts/colors";
+@import "../abstracts/variables";
+
+.contact-container {
+  .section {
+    &__content {
+      .contacts {
+        border: none;
+        border-bottom: 2px solid $color-dark-accent;
+      }
+
+      .personal-data {
+        margin-top: 160px;
+      }
+    }
+  }
+}
