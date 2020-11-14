@@ -40,5 +40,9 @@ module.exports = {
             city: 'Portland, OR',
             content: `Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sedpretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eunibh. Nullam mollis. Ut justo. Suspendisse potenti.`
         }
-    ]
+    ],
+    contact : {
+        title: 'КОНТАКТ',
+        description: 'Позвони мне, может быть.'
+    }
 };
