@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:prod": "grunt",
-    "start:dev": "NODE_ENV=development node ./server.js",
+    "start:dev": "node ./server.js",
     "start": "NODE_ENV=production node ./server.js"
   },
   "repository": {
