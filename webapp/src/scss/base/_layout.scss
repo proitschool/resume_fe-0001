@@ -36,6 +36,10 @@ $sm-section-padding: 50px;
       font-weight: bold;
     }
 
+    &-description {
+      font-size: 14px;
+    }
+
     @media (min-width: $sm-screen-breakpoint) {
       padding: $sm-section-padding;
     }
