@@ -8,22 +8,6 @@
 </head>
 <body>
 
-<!-- LOCALS -->
-<div class="locals-container container clearfix">
-    <div class="section">
-        <div class="section__header"></div>
-        <div class="section__content">
-            <div id="language-switcher" class="locals">
-                {{#each locals}}
-                <div class="locals__language-btn {{#if this.active}}locals__language-btn_active{{/if}}"
-                     data-local="{{this.local}}">{{this.name}}
-                </div>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- PROFILE -->
 <div class="profile-container container">
     <div class="section">
@@ -34,6 +18,14 @@
         </div>
         <div class="section__content">
             <div class="profile">
+                <div id="language-switcher" class="locals">
+                    {{#each locals}}
+                    <div class="locals__language-btn {{#if this.active}}locals__language-btn_active{{/if}}"
+                         data-local="{{this.local}}">{{this.name}}
+                    </div>
+                    {{/each}}
+                </div>
+
                 <div class="personal-data">
                     <div class="personal-data__name">desmond</div>
                     <div class="personal-data__surname">rambowski</div>
