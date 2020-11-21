@@ -3,11 +3,32 @@
 
 .profile-container {
   .section {
+    .background-container {
+      display: none;
+
+      @media (min-width: $md-screen-breakpoint){
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        z-index: 1;
+        background: #2b2c2c;
+        left: 0;
+        top: 0;
+      }
+    }
+
     &__header {
       position: relative;
       text-align: center;
+      z-index: 20;
+      padding-bottom: 21px;
+      border: none;
 
       @media (min-width: $md-screen-breakpoint) {
+        background: #2b2c2c;
+        padding-bottom: 0;
+        height: 100vh;
         text-align: right;
         padding-left: 0;
         padding-top: 0;
@@ -15,12 +36,16 @@
     }
 
     &__content {
-      padding-bottom: 21px;
+      z-index: 20;
+      background-color: $color-primary;
+      padding-bottom: 0;
+      border-top: none;
 
       @media (min-width: $md-screen-breakpoint) {
         display: grid;
         grid-template-rows: minmax(400px, calc(100vh - 145px)) 145px;
         padding-top: 0;
+        height: 100vh;
       }
     }
   }
