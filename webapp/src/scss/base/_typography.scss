@@ -2,11 +2,28 @@
 
 @font-face {
   font-family: "Lato";
+  src: url("#{$font-path}/Lato-Light.eot");
+  src: url("#{$font-path}/Lato-Light.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-path}/Lato-Light.woff") format("woff"),
+  url("#{$font-path}/Lato-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
   src: url("#{$font-path}/Lato-Regular.eot");
   src: url("#{$font-path}/Lato-Regular.eot?#iefix") format("embedded-opentype"),
   url("#{$font-path}/Lato-Regular.woff2") format("woff2"),
   url("#{$font-path}/Lato-Regular.woff") format("woff"),
   url("#{$font-path}/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("#{$font-path}/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal;
 }
